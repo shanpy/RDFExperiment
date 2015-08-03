@@ -1,0 +1,1205 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+  <!-- namespace URIs -->
+  <!ENTITY rdf     'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+  <!ENTITY rdfs    'http://www.w3.org/2000/01/rdf-schema#'>
+  <!ENTITY owl     'http://www.w3.org/2002/07/owl#'>
+  <!ENTITY dc      'http://purl.org/dc/elements/1.1/'>
+  <!ENTITY dct     'http://purl.org/dc/terms/'>
+  <!ENTITY akt     'http://www.aktors.org/ontology/portal#'>
+  <!ENTITY support 'http://www.aktors.org/ontology/support#'>
+]>
+<rdf:RDF xmlns:owl="&owl;"
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+         xmlns:dc="&dc;"
+         xmlns:dct="&dct;"
+         xmlns:akt="&akt;"
+         xmlns:support="&support;">
+
+  <owl:Ontology rdf:about="">
+    <rdfs:label>Publication export from IBM Research GmbH</rdfs:label>
+    <dc:title xml:lang="en">Publication export from IBM Research GmbH</dc:title>
+    <dc:description xml:lang="en">This ontology contains information detailing publications held by IBM Research GmbH</dc:description>
+    <dc:creator>ReSIST Project</dc:creator>
+    <dc:creator>Mikael Suominen</dc:creator>
+    <owl:imports rdf:resource="http://www.aktors.org/ontology/portal"/>
+    <owl:imports rdf:resource="http://www.aktors.org/ontology/extension"/>
+  </owl:Ontology>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-8889fb6570fce82986a23d015cb5ce0f'>
+    <akt:has-title>Public-Key Steganography with Active Attacks</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Proc. 2nd Theory of Cryptography Conference (TCC)</akt:has-title>
+        <akt:edited-by>
+          <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-2c5029aad1f09dccdf76f41c0e806b3a">
+            <akt:full-name>Joe Kilian</akt:full-name>
+          </akt:Person>
+        </akt:edited-by>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>210--226</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-956c9d74835924790d3a49f3d87be20c'>
+    <akt:has-title>Quantifying Probabilistic Information Flow in Computational Reactive Systems</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Proceedings of the 10th European Symposium on Research in Computer Security (ESORICS)</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>336--354</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Article-Reference rdf:about='http://ibm.rkbexplorer.com/id/article-df2791676d2c581ce280c5f21254844d'>
+    <akt:has-title>Real-or-Random Key Secrecy of the Otway-Rees Protocol via a Symbolic Security Proof</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:article-of-journal>
+      <akt:Journal rdf:about="http://ibm.rkbexplorer.com/id/journals-6aa41083edd40503438cc8d0acd971fa">
+        <akt:has-publication-reference>
+          <akt:Publication-Reference rdf:about="http://ibm.rkbexplorer.com/id/pub-ref-6aa41083edd40503438cc8d0acd971fa">
+            <akt:has-title>Electronic Notes in Theoretical Computer Science (ENTCS)</akt:has-title>
+          </akt:Publication-Reference>
+        </akt:has-publication-reference>
+      </akt:Journal>
+    </akt:article-of-journal>
+  </akt:Article-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-4c08c6d1591455adef9c35c415c7e2b6'>
+    <akt:has-title>Cryptographically Secure Anonymous Access Control with Accountability</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-f35b272afe2ab214e35243d31ad2d7ee">
+        <akt:full-name>Jan Camenisch</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-736991ca4ebcc50392cb416e27ccf22d">
+        <akt:full-name>Dieter Sommer</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>4th ACM Workshop on Privacy in the Electronic Society (WPES), Washington, Nov. 2005</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-cfcbaa9c657b2465c62bbcbee39b9273'>
+    <akt:has-title>Compositional Analysis of Contract Signing Protocols</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-d1be5c1acc6fbbf0e42a5c76556ec62b">
+        <akt:full-name>Anupam Datta</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-7b6f6ec27074847fce7fbdac466edb01">
+        <akt:full-name>Ante Derek</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-4b07b97f65d87e6845ffb33f57adde2d">
+        <akt:full-name>John C Mitchell</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-825db443525aec9720e0f9308f2b65fe">
+        <akt:full-name>Mathieu Turuani</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>18th IEEE Computer Security Foundations Workshop</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>94--110</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-5baaf76a664a823814c0546cd408404a'>
+    <akt:has-title>A Cryptographically Sound Dolev-Yao Style Security Proof of an Electronic Payment System</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-1c143114c8f0cc01f205b41e1aa23817">
+        <akt:full-name>Markus D u</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>18th IEEE Computer Security Foundations Workshop</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>78--93</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-8d2cde7318cd7e3112c6cca889966349'>
+    <akt:has-title>Tailoring the Dolev-Yao Abstraction to Web Service Realities</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-15b17164872f7f2b822c0fb87e21b69e">
+        <akt:full-name>Thomas Gross</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>ACM Secure Web Services Workshop (SWS)</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>65--74</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-83141f6201a54e68911763e6ea3b5665'>
+    <akt:has-title>On Fairness in Simulatability-based Cryptographic Systems</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-96e9edc563b3acf9cef0197c0d6a1c9f">
+        <akt:full-name>Dennis Hofheinz</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-1d8830c809a83c52d56c39469daadf18">
+        <akt:full-name>JÃ¶rn M u</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-ed5631cfb254defc461bf2e92e927964">
+        <akt:full-name>Dominique Unruh</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>3rd ACM Workshop on Formal Methods in Security Engineering (FMSE)</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>13--22</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Technical-Report-Reference rdf:about='http://ibm.rkbexplorer.com/id/tech-report-3a6e474dfbea646b583619c531cacf38'>
+    <akt:has-title>Symbolic and Cryptographic Analysis of the Secure WS-ReliableMessaging Scenario</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-816253fdf83f47b40486c509af641bc2">
+        <akt:full-name>Sebastian M o</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-5a4faa96f799daf7447b5ac6720c261b">
+        <akt:full-name>Luca Vigan o</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+  </akt:Technical-Report-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-9536fe8888d656fbf860bcd59fca826c'>
+    <akt:has-title>Relating Symbolic and Cryptographic Secrecy</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Proceedings of the IEEE Symposium on Research in Security and Privacy</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>171--182</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Article-Reference rdf:about='http://ibm.rkbexplorer.com/id/article-084de4733d105d1ed07c4fbd0e89f21b'>
+    <akt:has-title>Relating Symbolic and Cryptographic Secrecy</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-page-numbers>109-123</akt:has-page-numbers>
+    <akt:has-volume>2</akt:has-volume>
+    <akt:has-number>2</akt:has-number>
+    <akt:article-of-journal>
+      <akt:Journal rdf:about="http://ibm.rkbexplorer.com/id/journals-af35a01341c4a011bdc4f8025fcc955a">
+        <akt:has-publication-reference>
+          <akt:Publication-Reference rdf:about="http://ibm.rkbexplorer.com/id/pub-ref-af35a01341c4a011bdc4f8025fcc955a">
+            <akt:has-title>IEEE Transactions on Dependable and Secure Computing</akt:has-title>
+          </akt:Publication-Reference>
+        </akt:has-publication-reference>
+      </akt:Journal>
+    </akt:article-of-journal>
+  </akt:Article-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-115f0732a13ded8bae4dda8a4d596ea7'>
+    <akt:has-title>Limits of the Cryptographic Realization of Dolev-Yao-style XOR</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Proceedings of the 10th European Symposium on Research in Computer Security (ESORICS)</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>178--196</akt:has-page-numbers>
+    <akt:has-URL>http://eprint.iacr.org/2005/220</akt:has-URL>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Technical-Report-Reference rdf:about='http://ibm.rkbexplorer.com/id/tech-report-3ef3362e398258d964eeb9029ac52311'>
+    <akt:has-title>Cryptographic Key Secrecy of the Strengthened Yahalom Protocol via a Symbolic Security Proof</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-URL>http://domino.research.ibm.com/library/cyberdig.nsf/index.html</akt:has-URL>
+  </akt:Technical-Report-Reference>
+
+  <akt:Technical-Report-Reference rdf:about='http://ibm.rkbexplorer.com/id/tech-report-5688a910a9b8bb8d8399b5e005938095'>
+    <akt:has-title>Key-dependent Message Security under Active Attacks</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c36ab189d51eb398392f5b023a216af2">
+        <akt:full-name>Andre Scedrov</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-URL>http://eprint.iacr.org/2005/421/</akt:has-URL>
+  </akt:Technical-Report-Reference>
+
+  <akt:Article-Reference rdf:about='http://ibm.rkbexplorer.com/id/article-fa6cfa63b274fd5c9ed241f441e82a70'>
+    <akt:has-title>Symmetric Authentication Within a Simulatable Cryptographic Library</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-9fb81015f747592d777a482a2cf3552e">
+        <akt:full-name>Michael Waidner</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-page-numbers>135--154</akt:has-page-numbers>
+    <akt:has-volume>4</akt:has-volume>
+    <akt:has-number>3</akt:has-number>
+    <akt:has-URL>http://www.springerlink.com/link.asp?id=vd79t9gmty6jtmj7</akt:has-URL>
+    <akt:article-of-journal>
+      <akt:Journal rdf:about="http://ibm.rkbexplorer.com/id/journals-631db9680dee2356a5a4138a19072555">
+        <akt:has-publication-reference>
+          <akt:Publication-Reference rdf:about="http://ibm.rkbexplorer.com/id/pub-ref-631db9680dee2356a5a4138a19072555">
+            <akt:has-title>International Journal of Information Security</akt:has-title>
+          </akt:Publication-Reference>
+        </akt:has-publication-reference>
+      </akt:Journal>
+    </akt:article-of-journal>
+  </akt:Article-Reference>
+
+  <akt:Article-Reference rdf:about='http://ibm.rkbexplorer.com/id/article-5faad4c700969645d65b2fc60fadc7fe'>
+    <akt:has-title>Reactively Secure Signature Schemes</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-9fb81015f747592d777a482a2cf3552e">
+        <akt:full-name>Michael Waidner</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-page-numbers>242--252</akt:has-page-numbers>
+    <akt:has-volume>4</akt:has-volume>
+    <akt:has-number>4</akt:has-number>
+    <akt:has-URL>http://www.springerlink.com/index/10.1007/s10207-004-0062-8</akt:has-URL>
+    <akt:article-of-journal>
+      <akt:Journal rdf:about="http://ibm.rkbexplorer.com/id/journals-631db9680dee2356a5a4138a19072555">
+        <akt:has-publication-reference>
+          <akt:Publication-Reference rdf:about="http://ibm.rkbexplorer.com/id/pub-ref-631db9680dee2356a5a4138a19072555">
+            <akt:has-title>International Journal of Information Security</akt:has-title>
+          </akt:Publication-Reference>
+        </akt:has-publication-reference>
+      </akt:Journal>
+    </akt:article-of-journal>
+  </akt:Article-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-48c2aa35f4750e0f7c983a96ca52a24f'>
+    <akt:has-title>Justifying a Dolev-Yao Model under Active Attacks</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-9fb81015f747592d777a482a2cf3552e">
+        <akt:full-name>Michael Waidner</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Foundations of Security Analysis and Design III: FOSAD 2004/2005 Tutorial Lectures</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>1--41</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Technical-Report-Reference rdf:about='http://ibm.rkbexplorer.com/id/tech-report-8b2c463770fb4f3760d8f6ced1bd5008'>
+    <akt:has-title>Regulations Expressed As Logical Models (REALM)</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-f4d5c5eb6a1c181449770f2559d208c2">
+        <akt:full-name>Christopher Giblin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e7e396ab6265da136b16d4aec3f84937">
+        <akt:full-name>Alice Y Liu</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-dc50908d21130011307f65150938adbc">
+        <akt:full-name>Samuel M u</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-cfb3d739b1ac50d8331ccf7c8349daee">
+        <akt:full-name>Xin Zhou</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+  </akt:Technical-Report-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-4b30cf8c3fd4f3d2f33964cf7d1bd548'>
+    <akt:has-title>Regulations Expressed As Logical Models (REALM)</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-f4d5c5eb6a1c181449770f2559d208c2">
+        <akt:full-name>Christopher Giblin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e7e396ab6265da136b16d4aec3f84937">
+        <akt:full-name>Alice Y Liu</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-dc50908d21130011307f65150938adbc">
+        <akt:full-name>Samuel M u</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-cfb3d739b1ac50d8331ccf7c8349daee">
+        <akt:full-name>Xin Zhou</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>18th Annual Conference on Legal Knowledge and Information Systems (JURIX 2005)</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>37--48</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Technical-Report-Reference rdf:about='http://ibm.rkbexplorer.com/id/tech-report-b9babff73d753eb66939d1740fe53ea5'>
+    <akt:has-title>Browser Model for Security Analysis of Browser-Based Protocols</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-15b17164872f7f2b822c0fb87e21b69e">
+        <akt:full-name>Thomas Gross</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-79198209918ebc1c4c6ed7a7c85891ac">
+        <akt:full-name>Ahmad-Reza Sadeghi</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-URL>http://www.research.ibm.com/resources/paper_search.shtml</akt:has-URL>
+  </akt:Technical-Report-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-94f5d380d3b3ad373cf2ca950c26729c'>
+    <akt:has-title>Browser Model for Security Analysis of Browser-Based Protocols</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-15b17164872f7f2b822c0fb87e21b69e">
+        <akt:full-name>Thomas Gross</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-79198209918ebc1c4c6ed7a7c85891ac">
+        <akt:full-name>Ahmad-Reza Sadeghi</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Proceedings of the 10th European Symposium on Research in Computer Security (ESORICS)</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>489--508</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-96eb8c2ea3e8bd7384caad41596a3245'>
+    <akt:has-title>Proving a WS-Federation Passive Requestor Profile with a Browser Model</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-15b17164872f7f2b822c0fb87e21b69e">
+        <akt:full-name>Thomas Gross</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-79198209918ebc1c4c6ed7a7c85891ac">
+        <akt:full-name>Ahmad-Reza Sadeghi</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>ACM Secure Web Services Workshop (SWS)</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>54--64</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Article-Reference rdf:about='http://ibm.rkbexplorer.com/id/article-1a0aec9f21a7c59df6bad129bdac3d57'>
+    <akt:has-title>Archiv mit Dokumentenversteinerung</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-42dd3f24fdad2d9a404082c337ac524b">
+        <akt:full-name>Windsor W Hsu</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c93f076c60b46965acf139dcd2eb1fdb">
+        <akt:full-name>Shauchi Ong</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-page-numbers>82--84</akt:has-page-numbers>
+    <akt:has-volume>5</akt:has-volume>
+    <akt:has-number>2</akt:has-number>
+    <akt:article-of-journal>
+      <akt:Journal rdf:about="http://ibm.rkbexplorer.com/id/journals-cbf80cdb3b1df0e60c3285e2acdba996">
+        <akt:has-publication-reference>
+          <akt:Publication-Reference rdf:about="http://ibm.rkbexplorer.com/id/pub-ref-cbf80cdb3b1df0e60c3285e2acdba996">
+            <akt:has-title>DIGMA -- Zeitschrift fr Datenrecht und Informationssicherheit</akt:has-title>
+          </akt:Publication-Reference>
+        </akt:has-publication-reference>
+      </akt:Journal>
+    </akt:article-of-journal>
+  </akt:Article-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-9b867384071d825b4f6e3172f4001301'>
+    <akt:has-title>Web Services Security Configuration in a Service-Oriented Architecture</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-5c76c6dbb196dd673b138dde10492bcb">
+        <akt:full-name>Takeshi Imamura</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-0e1057217f8194add01ae8ed1b60f67c">
+        <akt:full-name>Michiaki Tatsubori</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-170f4d19043a3b7a5b7216f7e322be42">
+        <akt:full-name>Yuichi Nakamura</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-f4d5c5eb6a1c181449770f2559d208c2">
+        <akt:full-name>Christopher Giblin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>14 International World Wide Web Conference (WWW2005)</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>1120--1121</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-fbe32ccb022f1412338e028ec57f18f2'>
+    <akt:has-title>Service-oriented Assurance -- Comprehensive Security by Explicit Assurances</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c3a2ff4de28bde93411d9dd11919b2b2">
+        <akt:full-name>GÃ¼nter Karjoth</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-acd10592dc6fcfcce6b7327ce2321bd0">
+        <akt:full-name>Birgit Pfitzmann</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-0ea93f88582ad8c7c6fa0f270dad5175">
+        <akt:full-name>Matthias Schunter</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-9fb81015f747592d777a482a2cf3552e">
+        <akt:full-name>Michael Waidner</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>First Workshop on Quality of Protection (QoP 2005)</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Technical-Report-Reference rdf:about='http://ibm.rkbexplorer.com/id/tech-report-ce8516c4ee30a280260bc0b994a1be38'>
+    <akt:has-title>Optimal Resilience for Erasure-Coded Byzantine Distributed Storage</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-712a5ddf80cfaef655bc31dc18b9bb97">
+        <akt:full-name>Stefano Tessaro</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+  </akt:Technical-Report-Reference>
+
+  <akt:Book-Section-Reference rdf:about='http://ibm.rkbexplorer.com/id/book-section-f93c8253078e67026a90a42dda089cf3'>
+    <akt:has-title>Digital Steganography</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:edited-by>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e47056ec6fe3d3b9fd2df2a5d10833b9">
+        <akt:full-name>Henk C A van Tilborg</akt:full-name>
+      </akt:Person>
+    </akt:edited-by>
+    <akt:published-by>
+      <akt:Publishing-House rdf:about="http://ibm.rkbexplorer.com/id/publishers-c58bb5c583ed7185675da09ca5241aaf">
+        <akt:has-title>Springer</akt:has-title>
+      </akt:Publishing-House>
+    </akt:published-by>
+  </akt:Book-Section-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-f50fe6dd51ddbdd33ca5eed40e61adbc'>
+    <akt:has-title>Parsimonious Asynchronous Byzantine-Fault-Tolerant Atomic Broadcast</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-3c24eac52540bf53ecdf0babeb170df1">
+        <akt:full-name>HariGovind V Ramasamy</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Proc. OPODIS 2005 --- 9th Intl. Conference on Principles of Distributed Systems</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-f9ea177562d90fec26afafa70e390fd4'>
+    <akt:has-title>Lazy Revocation in Cryptographic File Systems</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-792a04e93e03c74c9d07042edca757c0">
+        <akt:full-name>Alina Oprea</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Proc. 3rd Intl. IEEE Security in Storage Workshop</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Technical-Report-Reference rdf:about='http://ibm.rkbexplorer.com/id/tech-report-568fd85d5595b576be1e488e2979150c'>
+    <akt:has-title>Lazy Revocation in Cryptographic File Systems</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-792a04e93e03c74c9d07042edca757c0">
+        <akt:full-name>Alina Oprea</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+  </akt:Technical-Report-Reference>
+
+  <akt:Technical-Report-Reference rdf:about='http://ibm.rkbexplorer.com/id/tech-report-5c2e56376073d7555783f31bca4fbec2'>
+    <akt:has-title>Secure Key-Updating for Lazy Revocation</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-e09cf3072ee307fc3d5bb36641de31cf">
+        <akt:full-name>Michael Backes</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-792a04e93e03c74c9d07042edca757c0">
+        <akt:full-name>Alina Oprea</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+  </akt:Technical-Report-Reference>
+
+  <akt:Article-Reference rdf:about='http://ibm.rkbexplorer.com/id/article-f29dd49b3c94b7655b07460dc669cb55'>
+    <akt:has-title>Random Oracles in Constantinople: Practical Asynchronous Byzantine Agreement using Cryptography</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-b144d70bd9e34cc7ab8999a015fb812f">
+        <akt:full-name>Klaus Kursawe</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-a16c1aeee7bed4ba648a77b767680097">
+        <akt:full-name>Victor Shoup</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-page-numbers>219--246</akt:has-page-numbers>
+    <akt:has-volume>18</akt:has-volume>
+    <akt:has-number>3</akt:has-number>
+    <akt:article-of-journal>
+      <akt:Journal rdf:about="http://ibm.rkbexplorer.com/id/journals-af7072f84466fd66c94219b83def161a">
+        <akt:has-publication-reference>
+          <akt:Publication-Reference rdf:about="http://ibm.rkbexplorer.com/id/pub-ref-af7072f84466fd66c94219b83def161a">
+            <akt:has-title>Journal of Cryptology</akt:has-title>
+          </akt:Publication-Reference>
+        </akt:has-publication-reference>
+      </akt:Journal>
+    </akt:article-of-journal>
+  </akt:Article-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-148a35c3f706484a2c79d82e2e919e9f'>
+    <akt:has-title>Brief Announcement: Optimal Resilience for Erasure-Coded Byzantine Distributed Storage</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-712a5ddf80cfaef655bc31dc18b9bb97">
+        <akt:full-name>Stefano Tessaro</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Proc. 19th International Conference on Distributed Computing (DISC 2005), September 26-29, 2005, Cracow, Poland</akt:has-title>
+        <akt:edited-by>
+          <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-5024e433c7dcb8f98f162c07a6478461">
+            <akt:full-name>Pierre Fraigniaud</akt:full-name>
+          </akt:Person>
+        </akt:edited-by>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>497--498</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-5900624c34f05f7388dc01b4d3c9382e'>
+    <akt:has-title>Asynchronous Verifiable Information Dispersal</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-712a5ddf80cfaef655bc31dc18b9bb97">
+        <akt:full-name>Stefano Tessaro</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Proc. 24th Symposium on Reliable Distributed Systems (SRDS 2005)</akt:has-title>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>191--202</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+  <akt:Proceedings-Paper-Reference rdf:about='http://ibm.rkbexplorer.com/id/inproceedings-2feebc2c50ab331efa1531c96f45c687'>
+    <akt:has-title>Brief Announcement: Asynchronous Verifiable Information Dispersal</akt:has-title>
+    <akt:has-date>
+      <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+        <support:year-of>2005</support:year-of>
+        <support:has-pretty-name>2005</support:has-pretty-name>
+      </support:Calendar-Date>
+    </akt:has-date>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-c319f50f588e6d8f41a90926ea4a9253">
+        <akt:full-name>Christian Cachin</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:has-author>
+      <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-712a5ddf80cfaef655bc31dc18b9bb97">
+        <akt:full-name>Stefano Tessaro</akt:full-name>
+      </akt:Person>
+    </akt:has-author>
+    <akt:paper-in-proceedings>
+      <akt:Conference-Proceedings-Reference>
+        <akt:has-title>Proc. 19th International Conference on Distributed Computing (DISC 2005), September 26-29, 2005, Cracow, Poland</akt:has-title>
+        <akt:edited-by>
+          <akt:Person rdf:about="http://ibm.rkbexplorer.com/id/person-5024e433c7dcb8f98f162c07a6478461">
+            <akt:full-name>Pierre Fraigniaud</akt:full-name>
+          </akt:Person>
+        </akt:edited-by>
+        <akt:has-date>
+          <support:Calendar-Date rdf:about="http://www.aktors.org/ontology/date#2005">
+            <support:year-of>2005</support:year-of>
+            <support:has-pretty-name>2005</support:has-pretty-name>
+          </support:Calendar-Date>
+        </akt:has-date>
+      </akt:Conference-Proceedings-Reference>
+    </akt:paper-in-proceedings>
+    <akt:has-page-numbers>503--504</akt:has-page-numbers>
+  </akt:Proceedings-Paper-Reference>
+
+</rdf:RDF>
+
+<!--  Canonisation Information: Fri, 13 Apr 2012 22:49:20 +0100
+0 URI(s) were substituted from file rdf/ibm-publications-2005.rdf to file rdf/ibm-publications-2005.rdf-canon
+-->
