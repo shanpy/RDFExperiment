@@ -11,53 +11,66 @@
 	<script src="./resources/js/jquery.min.js"></script>
 	<script src="./resources/js/bootstrap.min.js"></script>
 	<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
+	
+	<style>
+		.row{
+			padding: 1em;
+		}
+	</style>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">				
-				<div class="page-header">
-				  <h1>Pengyin's Experiment of RDF <small>This is a experiment page for Pengyin Shan to try data process with RDF.</small></h1>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<form:form method="post" action="performSearch.jsp" class="form-inline" modelAttribute="rdfModel">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
+				
+				<nav class="navbar navbar-default">
+				  <div class="container-fluid">
+				    <div class="navbar-header">
+				      <a class="navbar-brand" href="#">Pengyin's Experiment of RDF</a>
+				    </div>  
+					<form:form method="post" action="performSearch" class="form-inline" modelAttribute="rdfModel">
 						  <div class="form-group">
 						    <label for="searchtitle">Search Title</label>
 						    <form:input type="text" class="form-control" id="searchtitle" path="hasTitle"/>
 						  </div>
 						  <div class="form-group">
 						    <label for="searchauthor">Search Author</label>
-						    <input type="text" class="form-control" id="searchauthor" path="hasAuthor"/>
+						    <form:input type="text" class="form-control" id="searchauthor" path="hasAuthor"/>
 						  </div>
 						  <button class="btn btn-default" type="submit">Submit</button>
-						</form:form>
-					</div>				
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<table id="resultTable" class="table">
-						  <thead>
-						  	<tr>
-						  	<th>Title</th>
-						  	<th>Author</th>
-						  	<th>Date</th>
-						  	<th>Edited By</th>
-						  	<th>Published By</th>
-						  	</tr>
-						  </thead>
-						  <tbody>
-						  	<c:forEach items="${searchResults}" var="result">
-							    <tr>
-							    	<td>${result.hasTitle}</td>
-							    	<td>${result.hasAuthor}</td>
-							    	<td>${result.hasDate}</td>
-							    	<td>${result.editedBy}</td>
-							    	<td>${result.publishedBy}</td>
-							    </tr>
-							</c:forEach>
-						  </tbody>
-						</table>
+					</form:form>
+				   </div>
+				</nav> 
+				<div class="container-fluid"> 
+					<div class="row">
+						<div  class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+							<div class="alert alert-dismissible alert-success">
+							  <button type="button" class="close" data-dismiss="alert">×</button>
+							  <strong>This page is working in process. </strong>Try "Pengyin Shan" for Search Author Field.
+							</div>
+							<table id="resultTable" class="table table table-striped table-hover ">
+							  <thead>
+							  	<tr>
+							  	<th>Title</th>
+							  	<th>Author</th>
+							  	<th>Date</th>
+							  	<th>Edited By</th>
+							  	<th>Published By</th>
+							  	</tr>
+							  </thead>
+							  <tbody>
+							  	<c:forEach items="${searchResults}" var="result">
+								    <tr>
+								    	<td>${result.hasTitle}</td>
+								    	<td>${result.hasAuthor}</td>
+								    	<td>${result.hasDate}</td>
+								    	<td>${result.editedBy}</td>
+								    	<td>${result.publishedBy}</td>
+								    </tr>
+								</c:forEach>
+							  </tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>

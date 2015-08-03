@@ -1,16 +1,16 @@
 package com.pengyin.rdfexperiment;
 
 public class RdfModel {
-	private String hasTitile;
+	private String hasTitle;
 	private String hasDate;
 	private String hasAuthor;
 	private String editedBy;
 	private String publishedBy;
-	public String getHasTitile() {
-		return hasTitile;
+	public String getHasTitle() {
+		return hasTitle;
 	}
-	public void setHasTitile(String hasTitile) {
-		this.hasTitile = hasTitile;
+	public void setHasTitle(String hasTitile) {
+		this.hasTitle = hasTitile;
 	}
 	public String getHasDate() {
 		return hasDate;
