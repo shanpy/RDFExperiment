@@ -1,11 +1,11 @@
 package com.pengyin.rdfexperiment;
 
+import java.util.ArrayList;
+
 public class RdfModel {
 	private String hasTitle;
 	private String hasDate;
-	private String hasAuthor;
-	private String editedBy;
-	private String publishedBy;
+	private ArrayList<String> hasAuthor;
 	public String getHasTitle() {
 		return hasTitle;
 	}
@@ -18,22 +18,10 @@ public class RdfModel {
 	public void setHasDate(String hasDate) {
 		this.hasDate = hasDate;
 	}
-	public String getHasAuthor() {
+	public ArrayList<String> getHasAuthor() {
 		return hasAuthor;
 	}
-	public void setHasAuthor(String hasAuthor) {
+	public void setHasAuthor(ArrayList<String> hasAuthor) {
 		this.hasAuthor = hasAuthor;
-	}
-	public String getEditedBy() {
-		return editedBy;
-	}
-	public void setEditedBy(String editedBy) {
-		this.editedBy = editedBy;
-	}
-	public String getPublishedBy() {
-		return publishedBy;
-	}
-	public void setPublishedBy(String publishedBy) {
-		this.publishedBy = publishedBy;
 	}
 }

@@ -56,7 +56,7 @@ public class MainController {
 		ModelAndView res = new ModelAndView();
 		res.setViewName("index");
 		SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-		QueryBuilder qb = QueryBuilders.matchQuery("hasAuthor", rdfModel.getHasAuthor().trim());
+		QueryBuilder qb = QueryBuilders.termsQuery("hasAuthor", rdfModel.getHasAuthor());
 		searchSourceBuilder.query(qb);
 		System.out.println(searchSourceBuilder.toString());
 		Search search = new Search.Builder(searchSourceBuilder.toString()).addIndex("publications").build();

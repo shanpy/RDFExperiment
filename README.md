@@ -1,6 +1,6 @@
 ###An experiment of using Jena and Elastic Search to process RDF
 
-This is a small experiment Spring MVC web project I'm working on, in order to learn more about data processing of RDF or Ohter Linked Data.
+This is a small experiment Spring MVC web project I'm working on in my free time after work, in order to learn more about data processing of RDF or Ohter Linked Data.
 
 ####Tools/Frameworks:
 
