@@ -23,14 +23,14 @@ public class RdfSearch {
 			JestClientFactory factory = new JestClientFactory();
 			factory.setHttpClientConfig(new HttpClientConfig.Builder(connectionUrl).multiThreaded(true).build());		
 			JestClient client = factory.getObject();
-			Indexing(client);
+			Indexing(client);		
 			return client;
 		}
 		
 		private static void Indexing(JestClient client){
 			try {
 				client.execute(new CreateIndex.Builder("publications").build());
-				//Test Data
+				/*Test Data
 				Map<String, String> source = new LinkedHashMap<String,String>();
 				source.put("hasAuthor", "PengyinShan");
 				source.put("hasTitle", "TestTitle");
@@ -39,6 +39,8 @@ public class RdfSearch {
 				source.put("publishedBy", "Publisher");
 				Index index = new Index.Builder(source).index("publications").type("publication").build();
 				client.execute(index);
+				*/
+				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

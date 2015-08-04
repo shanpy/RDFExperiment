@@ -4,14 +4,20 @@ import io.searchbox.client.JestClient;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.util.*;
+
+import javax.servlet.ServletContext;
 
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -25,7 +31,8 @@ import com.google.gson.JsonObject;
 @Controller
 public class MainController {
 	
-	JestClient jc = RdfSearch.Init();
+	private @Autowired ServletContext servletContext;	
+	private JestClient jc = RdfSearch.Init();
 	
 	@ModelAttribute("RdfModel")
 	public RdfModel getUserForm() {
@@ -34,6 +41,12 @@ public class MainController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
+		InputStream in = servletContext.getResourceAsStream("/WEB-INF/content/ibm-publications-2005.rdf");
+		try {
+			RdfProcess.processRDF(in);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		model.addAttribute("rdfModel", new RdfModel());
 		return "index";
 	}

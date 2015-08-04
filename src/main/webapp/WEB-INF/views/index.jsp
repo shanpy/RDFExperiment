@@ -19,10 +19,6 @@
 	</style>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
-				
 				<nav class="navbar navbar-default">
 				  <div class="container-fluid">
 				    <div class="navbar-header">
@@ -54,8 +50,6 @@
 							  	<th>Title</th>
 							  	<th>Author</th>
 							  	<th>Date</th>
-							  	<th>Edited By</th>
-							  	<th>Published By</th>
 							  	</tr>
 							  </thead>
 							  <tbody>
@@ -64,8 +58,6 @@
 								    	<td>${result.hasTitle}</td>
 								    	<td>${result.hasAuthor}</td>
 								    	<td>${result.hasDate}</td>
-								    	<td>${result.editedBy}</td>
-								    	<td>${result.publishedBy}</td>
 								    </tr>
 								</c:forEach>
 							  </tbody>
@@ -73,9 +65,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
 </body>
 <script>
 $(document).ready( function () {
