@@ -41,8 +41,7 @@ public class MainController {
 	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Model model) {
-		
+	public String home(Model model) {		
 		//Two Test Dataset from datehub.io
 		InputStream in2005 = servletContext.getResourceAsStream("/WEB-INF/content/ibm-publications-2005.rdf");
 		InputStream in2006 = servletContext.getResourceAsStream("/WEB-INF/content/ibm-publications-2006.rdf");
@@ -54,10 +53,12 @@ public class MainController {
 				jc.execute(new Delete.Builder(String.valueOf(i)).index("publications").type("publication").build());
 			//Then I want to re-index
 			RdfSearch.Indexing(jc, rms2005);
-		} catch (Exception e) {
+			model.addAttribute("rdfModel", new RdfModel());
+			model.addAttribute("TotalDocuments", rms2005.size());
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 		}
-		model.addAttribute("rdfModel", new RdfModel());
 		return "index";
 	}
 	
