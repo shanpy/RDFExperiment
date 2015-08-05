@@ -29,10 +29,6 @@
 						    <label for="searchtitle">Search Title</label>
 						    <form:input type="text" class="form-control" id="searchtitle" path="hasTitle"/>
 						  </div>
-						  <div class="form-group">
-						    <label for="searchauthor">Search Author</label>
-						    <form:input type="text" class="form-control" id="searchauthor" path="hasAuthor"/>
-						  </div>
 						  <button class="btn btn-default" type="submit">Submit</button>
 					</form:form>
 				   </div>
@@ -42,7 +38,7 @@
 						<div  class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
 							<div class="alert alert-dismissible alert-success">
 							  <button type="button" class="close" data-dismiss="alert">×</button>
-							  <strong>This page is working in process. </strong>Try "Pengyin Shan" for Search Author Field.
+							  <strong>This page is working in process. </strong>Try "System" or "Security" for Title Field.
 							</div>
 							<table id="resultTable" class="table table table-striped table-hover ">
 							  <thead>
@@ -56,8 +52,8 @@
 							  	<c:forEach items="${searchResults}" var="result">
 								    <tr>
 								    	<td>${result.hasTitle}</td>
-								    	<td>${result.hasAuthor}</td>
-								    	<td>${result.hasDate}</td>
+								    	<td class="authorResult">${result.hasAuthor}</td>
+								    	<td class="dateResult">${result.hasDate}</td>
 								    </tr>
 								</c:forEach>
 							  </tbody>
@@ -69,6 +65,19 @@
 <script>
 $(document).ready( function () {
     $('#resultTable').DataTable();
+    
+    //Remove end comma for author and date
+    $('.authorResult').each(function(index,value){
+    	var len = $(value).text().trim().length
+    	if(len>0)
+    		$(value).text($(value).text().trim().substr(0,len-2));
+    });
+    
+    $('.dateResult').each(function(index,value){
+    	var len = $(value).text().trim().length
+    	if(len>0)
+    		$(value).text($(value).text().trim().substr(0,len-2));
+    });
 } );
 </script>
 </html>

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class RdfModel {
 	private String hasTitle;
 	private String hasDate;
-	private ArrayList<String> hasAuthor;
+	private String hasAuthor;
 	public String getHasTitle() {
 		return hasTitle;
 	}
@@ -18,10 +18,10 @@ public class RdfModel {
 	public void setHasDate(String hasDate) {
 		this.hasDate = hasDate;
 	}
-	public ArrayList<String> getHasAuthor() {
+	public String getHasAuthor() {
 		return hasAuthor;
 	}
-	public void setHasAuthor(ArrayList<String> hasAuthor) {
+	public void setHasAuthor(String hasAuthor) {
 		this.hasAuthor = hasAuthor;
 	}
 }

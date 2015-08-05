@@ -1,6 +1,7 @@
 package com.pengyin.rdfexperiment;
 
 import io.searchbox.client.JestClient;
+import io.searchbox.core.Delete;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
 
@@ -41,9 +42,18 @@ public class MainController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
-		InputStream in = servletContext.getResourceAsStream("/WEB-INF/content/ibm-publications-2005.rdf");
+		
+		//Two Test Dataset from datehub.io
+		InputStream in2005 = servletContext.getResourceAsStream("/WEB-INF/content/ibm-publications-2005.rdf");
+		InputStream in2006 = servletContext.getResourceAsStream("/WEB-INF/content/ibm-publications-2006.rdf");
 		try {
-			RdfProcess.processRDF(in);
+			ArrayList<RdfModel> rms2005 = RdfProcess.processRDF(in2005);
+			Boolean b = rms2005.addAll(RdfProcess.processRDF(in2006));
+			//First I temporary need to delete all existing indexes first to prevent duplicate insertion
+			for(int i=0; i<rms2005.size(); i++)
+				jc.execute(new Delete.Builder(String.valueOf(i)).index("publications").type("publication").build());
+			//Then I want to re-index
+			RdfSearch.Indexing(jc, rms2005);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -56,9 +66,8 @@ public class MainController {
 		ModelAndView res = new ModelAndView();
 		res.setViewName("index");
 		SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-		QueryBuilder qb = QueryBuilders.termsQuery("hasAuthor", rdfModel.getHasAuthor());
+		QueryBuilder qb = QueryBuilders.matchQuery("hasTitle", rdfModel.getHasTitle());
 		searchSourceBuilder.query(qb);
-		System.out.println(searchSourceBuilder.toString());
 		Search search = new Search.Builder(searchSourceBuilder.toString()).addIndex("publications").build();
 		try {
 			SearchResult searchresult = jc.execute(search);		

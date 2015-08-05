@@ -4,13 +4,11 @@
 package com.pengyin.rdfexperiment;
 import java.util.*;
 
-import org.apache.jena.atlas.json.JsonBuilder;
-
 import io.searchbox.client.*;
 import io.searchbox.client.config.HttpClientConfig;
+import io.searchbox.core.Delete;
 import io.searchbox.core.Index;
 import io.searchbox.indices.CreateIndex;
-import io.searchbox.indices.mapping.PutMapping;
 
 /**
  * @author Pengyin
@@ -19,27 +17,26 @@ import io.searchbox.indices.mapping.PutMapping;
 public class RdfSearch {
 	
 		public static JestClient Init(){
-			String connectionUrl ="https://paas:5cd731240d5ddaef6596cf82347a6d17@dwalin-us-east-1.searchly.com";
+			String connectionUrl ="https://paas:29ec3c61c6e94f01f8a5979574ca53da@dwalin-us-east-1.searchly.com";
 			JestClientFactory factory = new JestClientFactory();
 			factory.setHttpClientConfig(new HttpClientConfig.Builder(connectionUrl).multiThreaded(true).build());		
 			JestClient client = factory.getObject();
-			Indexing(client);		
 			return client;
 		}
 		
-		private static void Indexing(JestClient client){
+		public static void Indexing(JestClient client, ArrayList<RdfModel> rms){
 			try {
 				client.execute(new CreateIndex.Builder("publications").build());
-				/*Test Data
-				Map<String, String> source = new LinkedHashMap<String,String>();
-				source.put("hasAuthor", "PengyinShan");
-				source.put("hasTitle", "TestTitle");
-				source.put("editedBy", "Editor");
-				source.put("hasDate", "2015");
-				source.put("publishedBy", "Publisher");
-				Index index = new Index.Builder(source).index("publications").type("publication").build();
-				client.execute(index);
-				*/
+				//Indexing RDF Data
+				for(int i=0; i<rms.size(); i++){
+					Map<String, String> source = new LinkedHashMap<String,String>();
+					RdfModel rm = rms.get(i);
+					source.put("hasAuthor", rm.getHasAuthor());
+					source.put("hasTitle", rm.getHasTitle());
+					source.put("hasDate", rm.getHasDate());
+					Index index = new Index.Builder(source).index("publications").type("publication").id(String.valueOf(i)).build();
+					client.execute(index);
+				}
 				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block

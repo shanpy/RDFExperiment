@@ -9,6 +9,7 @@ public class RdfPropertyList {
 	public static String akt = "http://www.aktors.org/ontology/portal#";
 	public static String support = "http://www.aktors.org/ontology/support#";
 	
+	//pshan 8/4/2015: For now I only care publications under Proceedings-Paper-Reference
 	public static Resource r_proceedings_paper_reference = ResourceFactory.createResource(akt+"Proceedings-Paper-Reference");
 	
 	public static Property p_hasTitle = ResourceFactory.createProperty(akt+"has-title");
