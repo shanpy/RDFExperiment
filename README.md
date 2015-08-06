@@ -14,6 +14,8 @@ This is a small experiment Spring MVC web project I'm working on in my free time
 
 - Due to time limitation, I use simple Spring MVC framework and a little bit Bootstrap3, just want to build a Java web app quickly.
 
+- <a href="http://d3js.org/">D3.js</a>: I'm learning it. It's a great client-side data-driven document manipulating tool.
+
 ####Agenda
 
 - 8/1/2015 - 8/2/2015: A brief learn to Introdcution of RDF. Plan web app structure and find proper data resouce. Deploy web app to Heroku and quickly learn and add Jest to project.
@@ -21,3 +23,7 @@ This is a small experiment Spring MVC web project I'm working on in my free time
 - 8/3/2015: Learn and add Jena to project. Now app can read sample RDF file and get following properties: title, author fullname and year.
 
 - 8/4/2015: Add this README file.
+
+- 8/5/2015: Combine Jena and Elastic Search. Now app can index RDF file for following properties: title, author fullname and year. User can search keyword in title, and app will search for corresponding RDF entries.
+
+			Add D3.js pie chart example to try clinet-side data processing, using JavaScript.
