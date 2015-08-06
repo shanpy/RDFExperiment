@@ -11,6 +11,7 @@ import java.text.DateFormat;
 import java.util.*;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -26,6 +27,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.google.gson.JsonObject;
 
@@ -40,7 +42,7 @@ public class MainController {
 	    return new RdfModel();
 	}
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value={"/","/index"}, method = RequestMethod.GET)
 	public String home(Model model) {		
 		//Two Test Dataset from datehub.io
 		InputStream in2005 = servletContext.getResourceAsStream("/WEB-INF/content/ibm-publications-2005.rdf");
@@ -48,13 +50,10 @@ public class MainController {
 		try {
 			ArrayList<RdfModel> rms2005 = RdfProcess.processRDF(in2005);
 			Boolean b = rms2005.addAll(RdfProcess.processRDF(in2006));
-			//First I temporary need to delete all existing indexes first to prevent duplicate insertion
 			for(int i=0; i<rms2005.size(); i++)
 				jc.execute(new Delete.Builder(String.valueOf(i)).index("publications").type("publication").build());
-			//Then I want to re-index
-			RdfSearch.Indexing(jc, rms2005);
+			RdfSearch.Indexing(jc, rms2005);			
 			model.addAttribute("rdfModel", new RdfModel());
-			model.addAttribute("TotalDocuments", rms2005.size());
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,22 +62,19 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="/performSearch", method = RequestMethod.POST)
-	public ModelAndView performSearch(@ModelAttribute("RdfModel") RdfModel rdfModel, Model model){
-		ModelAndView res = new ModelAndView();
-		res.setViewName("index");
+	public String performSearch(@ModelAttribute("RdfModel") RdfModel rdfModel, Model model, RedirectAttributes attrs){
 		SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
 		QueryBuilder qb = QueryBuilders.matchQuery("hasTitle", rdfModel.getHasTitle());
 		searchSourceBuilder.query(qb);
 		Search search = new Search.Builder(searchSourceBuilder.toString()).addIndex("publications").build();
 		try {
 			SearchResult searchresult = jc.execute(search);		
-			List<RdfModel> publications = searchresult.getSourceAsObjectList(RdfModel.class);
-			System.out.println("result: " + publications.size());
-			res.addObject("searchResults", publications);
+			ArrayList<RdfModel> publications = new ArrayList<RdfModel>(searchresult.getSourceAsObjectList(RdfModel.class));
+			model.addAttribute("searchResults", publications);
+			model.addAttribute("rdfModel", new RdfModel());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		res.addObject("rdfModel", new RdfModel());
-		return res;
+		return "index";
 	}
 }

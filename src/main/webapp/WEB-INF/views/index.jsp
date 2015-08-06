@@ -39,7 +39,6 @@
 							  <button type="button" class="close" data-dismiss="alert">×</button>
 							  <strong>This page is working in process. </strong>Try "System" or "Security" for Title Field.
 							</div>
-							<div id="totaldocs" hidden>${TotalDocuments}</div>
 							<table id="resultTable" class="table table table-striped table-hover ">
 							  <thead>
 							  	<tr>
@@ -58,7 +57,7 @@
 								</c:forEach>
 							  </tbody>
 							</table>
-							<div id="chartSVG">
+							<div style="margin-top: 2em; height:300px; width: 500px;" id="chartSVG">
 							</div>
 						</div>
 					</div>
@@ -79,49 +78,65 @@ $(document).ready( function () {
     		$(value).text($(value).text().trim().substr(0,len-2));
     });
 
-    //Prepare for D3
-    var h = 300;
-    var padding = 5;
-    var svg = d3.select(document.getElementById('chartSVG')).append('svg').attr('height',h).attr('width', '100%');
-    var w = document.getElementsByTagName('svg')[0].offsetWidth;
-
-    if($('#result').find('tbody').find(tr).length > 0)
-    	createPieChart('resultTable');
+    if($('#resultTable').find('tbody').find('tr').length > 0)
+    	createPieChart();
 } );
 
 //Use D3.js to virtualize data in table
-function createPieChart(id){
+function createPieChart(){
 	
-    	//Prepare dataset
-    	var existingdocs = $('#' + id).find('tbody').find('tr').length;
-    	var totaldocs = $('#totaldocs').text().trim();
-    	var dateset = [existingdocs/totaldocs];
-        window.console.log(dateset);
-
+		//Prepare dataset
+		var totaldocs = parseInt($('#resultTable').find('tbody').find('tr').length);
+		var docs2005 = 0;
+		var docs2006 = 0; 
+		var docsunknown = 0;    	
+		$('.dateResult').each(function(index,value){
+			if(parseInt(value.innerHTML.trim())==2005){
+				docs2005 += 1;
+			}
+			else if(parseInt(value.innerHTML.trim())==2006){
+				docs2006 += 1;
+			}
+			else
+				docsunknown += 1;
+		});
+		var dataset = [{"label": "Publications from 2005", "value": docs2005},
+		               {"label": "Publications from 2006", "value": docs2006},
+		               {"label": "Unknown Year of Publications", "value": docsunknown}];
+    
+		//Prepare for D3
+	    var h = 300;
+    	var w = 500;
+    	var r = Math.min(w, h) / 2;
+	    var svg = d3.select(document.getElementById('chartSVG')).data([dataset])
+	    			.append('svg').attr('height',h).attr('width', w).append('g').attr("transform", "translate(" + r + "," + r + ")");
+	
+        var arc = d3.svg.arc().outerRadius(r);
+    	
     	//Create Pie Chart
-    	var pie = d3.layout.pie();
-    	dateset = pie(dataset);
-
-    	var outRadius = h/2;
-    	var inRadius = 0;
-    	var arc = d3.svg.arc().innerRadius(inRadius).outerRadius(outRadius);
-    	var arcs = svg.selectAll('g.arc')
-    					.data(dataset)
+    	var pie = d3.layout.pie().value(function(d){return d.value;});
+    	var arcs = svg.selectAll('g.slice')
+    					.data(pie)
     					.enter()
     					.append('g')
-    					.attr('class', 'arc')
-    					.attr('transform','translate(' + outRadius + ',' + outRadius + ')');
-
+    					.attr('class', 'slice');
+    	
+    	//Fill Color
+    	var color = d3.scale.category20c();
     	arcs.append('path')
-    		.attr('fill', function(d){
-    			return 'rgb(100,' + Math.round(d.value) + ",200)";
+    		.attr('fill', function(d,i){
+    			return color(i);
     		}).attr('d',arc);
-
+		
+    	//Add Label
     	arcs.append('text').attr('transform',function(d){
+    		d.innerRadius = 0;
+            d.outerRadius = r;
     		return "translate(" + arc.centroid(d) + ")";})
     						.attr('text-anchor','middle')
-					    	.text(function(d){
-					    		return d.value;
+					    	.text(function(d,i){
+					    		if(dataset[i].value != 0)
+					    			return dataset[i].label + ": " + dataset[i].value;
 					    	});			
 }
 </script>
